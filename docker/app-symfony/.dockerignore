@@ -1,0 +1,10 @@
+/.idea
+/.git
+/.github
+/.gitignore
+/Dockerfile
+/README.md
+/src/phpunit.xml.dist
+/src/public/bundles
+/src/var
+/src/vendor
