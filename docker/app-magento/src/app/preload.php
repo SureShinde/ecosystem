@@ -55,9 +55,9 @@ $preload = [
     dirname(__DIR__) . '/vendor/composer/autoload_classmap.php',
 ];
 
-if (getenv('MAGE_MODE') == 'production') {
+if (getenv('MAGE_MODE') === 'production') {
     $preload[] = [
-        dirname(__DIR__) . '/generated',
+        dirname(__DIR__) . '/generated/metadata',
     ];
 }
 

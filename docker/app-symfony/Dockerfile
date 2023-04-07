@@ -22,7 +22,8 @@ USER root
 ENV \
 APP_ENV="prod" \
 APP_DEBUG="1" \
-APP_SECRET="8a173d6f3c8bc1a030c4ff378866f834"
+APP_SECRET="8a173d6f3c8bc1a030c4ff378866f834" \
+PHP_OPCACHE__PRELOAD="/var/www/config/preload.php"
 
 RUN set -eux; \
 rm -rf /var/www/*
