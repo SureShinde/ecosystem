@@ -49,3 +49,11 @@ This git repository aims to capitalize and industrialize the different packages 
 @todo description
 
 [Documentation](portainer)
+
+--- 
+
+### VM
+
+@todo description
+
+[Documentation](vm)
