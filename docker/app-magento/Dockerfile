@@ -64,7 +64,8 @@ RABBITMQ_HOST="rootless" \
 RABBITMQ_PORT="nopassword" \
 RABBITMQ_USER="rootless" \
 RABBITMQ_PASSWORD="nopassword" \
-RABBITMQ_VIRTUALHOST="/"
+RABBITMQ_VIRTUALHOST="/" \
+PHP_OPCACHE__PRELOAD="/var/www/app/preload.php"
 
 RUN set -eux; \
 rm -rf /var/www/*
