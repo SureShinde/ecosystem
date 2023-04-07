@@ -96,10 +96,11 @@ php${PHP_VERSION}-ftp \
 php${PHP_VERSION}-ldap \
 php${PHP_VERSION}-zip
 
+# PHP_SENDMAIL_PATH="/usr/sbin/sendmail-local --smtp-addr=mailhog:1025"
 RUN set -eux; \
 wget -q https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendmail_linux_amd64; \
 mv mhsendmail_linux_amd64 /usr/sbin/sendmail-local; \
-chmod +x /usr/sbin/sendmail-local
+chmod +x /usr/sbin/sendmail-local \
 
 COPY --chown=rootless:rootless system /
 
