@@ -55,7 +55,6 @@ CRYPT_KEY="030bf837c0fd8baa0b1d20d7ea96f1a9" \
 MYSQL_HOST="mysql" \
 MYSQL_PORT="3306" \
 MYSQL_DATABASE="magento" \
-MYSQL_ROOT_PASSWORD="nopassword" \
 MYSQL_USER="rootless" \
 MYSQL_PASSWORD="nopassword" \
 REDIS_SESSION_HOST="redis-session" \
