@@ -1,6 +1,6 @@
 <?php
 return [
-    'MAGE_MODE' => getenv('APP_ENV'),
+    'MAGE_MODE' => getenv('MAGE_MODE'),
     'x-frame-options' => 'SAMEORIGIN',
     'install' => [
         'date' => 'Mon, 03 Jan 2022 10:12:35 +0000'
@@ -12,7 +12,7 @@ return [
         'driver' => 'file'
     ],
     'crypt' => [
-        'key' => getenv('APP_SECRET')
+        'key' => getenv('CRYPT_KEY')
     ],
     'directories' => [
         'document_root_is_pub' => true
