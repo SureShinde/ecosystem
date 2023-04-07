@@ -19,6 +19,11 @@ FROM aartintelligent/app-php:${PHP_VERSION}
 
 USER root
 
+ENV \
+APP_ENV="prod" \
+APP_DEBUG="1" \
+APP_SECRET="8a173d6f3c8bc1a030c4ff378866f834"
+
 RUN set -eux; \
 rm -rf /var/www/*
 
