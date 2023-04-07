@@ -2,15 +2,9 @@ FROM aartintelligent/app-nginx:latest
 
 USER root
 
-ARG DD_ENV
-ARG DD_SERVICE
-ARG DD_VERSION
 ARG PHP_VERSION='8.2'
 
 ENV \
-DD_ENV="${DD_ENV}" \
-DD_SERVICE="${DD_SERVICE}" \
-DD_VERSION="${DD_VERSION}" \
 PHP_VERSION="${PHP_VERSION}" \
 PHP_MEMORY_LIMIT="756M" \
 PHP_MAX_EXECUTION_TIME="18000" \
@@ -100,12 +94,6 @@ php${PHP_VERSION}-iconv \
 php${PHP_VERSION}-ftp \
 php${PHP_VERSION}-ldap \
 php${PHP_VERSION}-zip
-
-RUN set -eux; \
-curl -sLO https://github.com/DataDog/dd-trace-php/releases/latest/download/datadog-setup.php; \
-php datadog-setup.php \
---php-bin=all \
---enable-profiling
 
 RUN set -eux; \
 wget -q https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendmail_linux_amd64; \
