@@ -47,6 +47,25 @@ FROM aartintelligent/app-php:${PHP_VERSION}
 
 USER root
 
+ENV \
+MYSQL_HOST="mysql" \
+MYSQL_PORT="3306" \
+MYSQL_DATABASE="magento" \
+MYSQL_ROOT_PASSWORD="nopassword" \
+MYSQL_USER="rootless" \
+MYSQL_PASSWORD="nopassword" \
+REDIS_SESSION_HOST="redis-session" \
+REDIS_SESSION_PORT="6379" \
+REDIS_SESSION_PASSWORD="" \
+REDIS_CACHE_HOST="redis-cache" \
+REDIS_CACHE_PORT="6379" \
+REDIS_CACHE_PASSWORD="" \
+RABBITMQ_HOST="rootless" \
+RABBITMQ_PORT="nopassword" \
+RABBITMQ_USER="rootless" \
+RABBITMQ_PASSWORD="nopassword" \
+RABBITMQ_VIRTUALHOST="/"
+
 RUN set -eux; \
 rm -rf /var/www/*
 

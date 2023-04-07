@@ -1,6 +1,6 @@
 <?php
 return [
-    'MAGE_MODE' => getenv('MAGE_MODE'),
+    'MAGE_MODE' => getenv('APP_ENV'),
     'x-frame-options' => 'SAMEORIGIN',
     'install' => [
         'date' => 'Mon, 03 Jan 2022 10:12:35 +0000'
@@ -12,7 +12,7 @@ return [
         'driver' => 'file'
     ],
     'crypt' => [
-        'key' => getenv('CRYPT_KEY')
+        'key' => getenv('APP_SECRET')
     ],
     'directories' => [
         'document_root_is_pub' => true
@@ -134,24 +134,5 @@ return [
         'config_webservice' => 1,
         'translate' => 1,
         'vertex' => 1
-    ],
-    'system' => [
-        'default' => [
-            'web' => [
-                'seo' => [
-                    'use_rewrites' => 1
-                ],
-                'unsecure' => [
-                    'base_url' => 'http://www.magento.local/'
-                ],
-            ],
-            'catalog' => [
-                'search' => [
-                    'engine' => 'elasticsearch7',
-                    'elasticsearch7_server_hostname' => getenv('ELASTICSEARCH_HOST'),
-                    'elasticsearch7_server_port' => getenv('ELASTICSEARCH_PORT'),
-                ]
-            ]
-        ]
     ]
 ];
