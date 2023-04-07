@@ -100,7 +100,7 @@ php${PHP_VERSION}-zip
 RUN set -eux; \
 wget -q https://github.com/mailhog/mhsendmail/releases/download/v0.2.0/mhsendmail_linux_amd64; \
 mv mhsendmail_linux_amd64 /usr/sbin/sendmail-local; \
-chmod +x /usr/sbin/sendmail-local \
+chmod +x /usr/sbin/sendmail-local
 
 COPY --chown=rootless:rootless system /
 
