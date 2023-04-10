@@ -1,3 +1,0 @@
-# AArtIntelligent : Portainer
-
-@todo description
