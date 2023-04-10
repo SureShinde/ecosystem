@@ -15,6 +15,10 @@ if [ "$1" = 'supervisord' ]; then
 
   done < <(grep -v '^ *#' < '/docker/d-entrypoint.list')
 
-fi
+  exec supervisord
 
-exec "$@"
+else
+
+  exec "$@"
+
+fi
