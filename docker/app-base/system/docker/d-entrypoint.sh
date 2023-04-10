@@ -9,7 +9,7 @@ if [ "$1" = 'supervisord' ]; then
 
     if [ -f "$script" ]; then
 
-      bash "$script"
+      bash "$script" "$@"
 
     fi
 

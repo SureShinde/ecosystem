@@ -7,7 +7,7 @@ while IFS= read -r script; do
 
   if [ -f "$script" ]; then
 
-    bash "$script"
+    bash "$script" "$@"
 
   fi
 
