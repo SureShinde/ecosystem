@@ -33,3 +33,7 @@ docker stop app-base
 ```shell
 docker rm app-base
 ```
+
+```shell
+docker push aartintelligent/app-base:latest
+```

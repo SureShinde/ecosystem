@@ -45,3 +45,7 @@ docker stop app-nginx
 ```shell
 docker rm app-nginx
 ```
+
+```shell
+docker push aartintelligent/app-nginx:latest
+```

@@ -53,3 +53,11 @@ docker stop app-magento
 ```shell
 docker rm app-magento
 ```
+
+```shell
+docker push aartintelligent/app-magento:2.4
+```
+
+```shell
+docker push aartintelligent/app-magento:latest
+```

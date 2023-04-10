@@ -61,3 +61,15 @@ docker stop app-php
 ```shell
 docker rm app-php
 ```
+
+```shell
+docker push aartintelligent/app-php:8.1
+```
+
+```shell
+docker push aartintelligent/app-php:8.2
+```
+
+```shell
+docker push aartintelligent/app-php:latest
+```

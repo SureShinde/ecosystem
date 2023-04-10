@@ -17,3 +17,7 @@ docker run -it --rm -u $(id -u):$(id -g) -v $(pwd):/src aartintelligent/ops-phin
 ```shell
 docker run -it --rm -u $(id -u):$(id -g) -v $(pwd):/src aartintelligent/ops-phing:latest --help
 ```
+
+```shell
+docker push aartintelligent/ops-phing:latest
+```

@@ -53,3 +53,11 @@ docker stop app-symfony
 ```shell
 docker rm app-symfony
 ```
+
+```shell
+docker push aartintelligent/app-symfony:6.2
+```
+
+```shell
+docker push aartintelligent/app-symfony:latest
+```
