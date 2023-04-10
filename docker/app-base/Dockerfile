@@ -71,6 +71,11 @@ COPY --chown=rootless:rootless system /
 RUN set -eux; \
 mkdir -p \
 /etc/supervisor \
+/etc/cron.d \
+/etc/cron.daily \
+/etc/cron.hourly \
+/etc/cron.monthly \
+/etc/cron.weekly \
 /var/pid \
 /var/run \
 /var/lock \
@@ -80,6 +85,12 @@ mkdir -p \
 /var/www; \
 chmod 777 -R \
 /etc/supervisor \
+/etc/crontab \
+/etc/cron.d \
+/etc/cron.daily \
+/etc/cron.hourly \
+/etc/cron.monthly \
+/etc/cron.weekly \
 /var/pid \
 /var/run \
 /var/lock \
@@ -89,6 +100,12 @@ chmod 777 -R \
 /var/www; \
 chown rootless:rootless \
 /etc/supervisor \
+/etc/crontab \
+/etc/cron.d \
+/etc/cron.daily \
+/etc/cron.hourly \
+/etc/cron.monthly \
+/etc/cron.weekly \
 /var/pid \
 /var/run \
 /var/lock \
@@ -106,6 +123,12 @@ chmod +x \
 /docker/d-notify.sh \
 /docker/d-start.sh \
 /docker/d-stop.sh; \
+rm -rf \
+/etc/cron.d/* \
+/etc/cron.daily/* \
+/etc/cron.hourly/* \
+/etc/cron.monthly/* \
+/etc/cron.weekly/*; \
 echo "/docker/d-bootstrap-supervisor.sh" >> /docker/d-bootstrap.list; \
 echo "/docker/d-bootstrap-sstmp.sh" >> /docker/d-bootstrap.list; \
 echo "/docker/d-bootstrap.sh" >> /docker/d-entrypoint.list; \
