@@ -3,7 +3,7 @@ return [
     'MAGE_MODE' => getenv('MAGE_MODE'),
     'x-frame-options' => 'SAMEORIGIN',
     'install' => [
-        'date' => 'Mon, 03 Jan 2022 10:12:35 +0000'
+        'date' => date('r')
     ],
     'backend' => [
         'frontName' => 'admin'
