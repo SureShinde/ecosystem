@@ -113,6 +113,12 @@ chown rootless:rootless \
 /var/cache \
 /var/lib \
 /var/www; \
+rm -rf \
+/etc/cron.d/* \
+/etc/cron.daily/* \
+/etc/cron.hourly/* \
+/etc/cron.monthly/* \
+/etc/cron.weekly/*; \
 chmod +x \
 /docker/d-bootstrap.sh \
 /docker/d-bootstrap-sstmp.sh \
@@ -123,12 +129,6 @@ chmod +x \
 /docker/d-notify.sh \
 /docker/d-start.sh \
 /docker/d-stop.sh; \
-rm -rf \
-/etc/cron.d/* \
-/etc/cron.daily/* \
-/etc/cron.hourly/* \
-/etc/cron.monthly/* \
-/etc/cron.weekly/*; \
 echo "/docker/d-bootstrap-supervisor.sh" >> /docker/d-bootstrap.list; \
 echo "/docker/d-bootstrap-sstmp.sh" >> /docker/d-bootstrap.list; \
 echo "/docker/d-bootstrap.sh" >> /docker/d-entrypoint.list; \
